@@ -6794,7 +6794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643013783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61524660560a7f3468d0dbc258e00cc7, type: 3}
   m_Name: 
@@ -6871,6 +6871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a525666a29a58c44abf24bf451bb9172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kickDirection: {x: 0, y: 10, z: 1}
+  kickForce: 30
   triggerInteractionTime: 0.1
   interactionTimer: 0
 --- !u!1001 &643953310

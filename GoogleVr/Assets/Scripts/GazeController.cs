@@ -23,13 +23,20 @@ namespace GoogleVR.HelloVR
 
     /// <summary>Controls interactable teleporting objects in the Demo scene.</summary>
     [RequireComponent(typeof(Collider))]
-    public class GazeController : MonoBehaviour
+    public class GazeController : VoiceInteractable
     {
-        
+        Rigidbody rb;
+    public Vector3 kickDirection;
+    public float kickForce = 30f;
         public float triggerInteractionTime = 0.1f;
         public float interactionTimer = 0f;
         private bool timerRunning = false;
         private bool interact = true; // para que solo ocurra una vez
+
+        void Awake()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
 
         void FixedUpdate ()
         {
@@ -64,14 +71,26 @@ namespace GoogleVR.HelloVR
         }
 
         
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             SetGazedAt(false);
         }
 
         public void Interact()
         {
            Debug.Log("Mostrando pregunta");
+        }
+
+        public override void VoiceInteract(string action)
+        {
+            base.VoiceInteract(action);
+            Debug.Log("Pateando pelota...");
+            if (action == "ataca" && timerRunning)
+            {
+                // Debug.Log("Palabra "+action+" correcta, agregando a inventario");
+                rb.AddForce(kickDirection * kickForce, ForceMode.Force);
+            }
         }
     }
 }
