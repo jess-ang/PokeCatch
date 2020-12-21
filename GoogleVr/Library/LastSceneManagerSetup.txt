@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Watson/Examples/ExampleStreaming.unity
+- path: Assets/Scenes/ProyectoVR.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

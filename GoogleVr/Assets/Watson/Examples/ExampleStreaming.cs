@@ -58,12 +58,13 @@ namespace IBM.Watsson.Examples
         private int _recordingHZ = 22050;
 
         private SpeechToTextService _service;
+        private VoiceCommandProcessor commandProcessor;
 
         void Start()
         {
             LogSystem.InstallDefaultReactors();
             Runnable.Run(CreateService());
-            // commandProcessor = VoiceCommandProcessor.Instance;
+            commandProcessor = VoiceCommandProcessor.Instance;
         }
 
         private IEnumerator CreateService()
@@ -191,7 +192,7 @@ namespace IBM.Watsson.Examples
                 }
                 else
                 {
-                    // calculate the number of samples remaining until we ready for a block of audio, 
+                    // calculate the number of samples remaining until we ready for a block of audio,
                     // and wait that amount of time it will take to record.
                     int remaining = bFirstBlock ? (midPoint - writePos) : (_recording.samples - writePos);
                     float timeRemaining = (float)remaining / (float)_recordingHZ;
@@ -212,17 +213,16 @@ namespace IBM.Watsson.Examples
                     {
                         string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
                         Log.Debug("ExampleStreaming.OnRecognize()", text);
+                        if (res.final)
+                            commandProcessor.Create(alt.transcript);
                         ResultsField.text = text;
-                        // if (res.final)
-                        //     commandProcessor.Create(alt.transcript);
-                        // anim.SetTrigger(alt.transcript.Trim());
                     }
 
                     if (res.keywords_result != null && res.keywords_result.keyword != null)
                     {
                         foreach (var keyword in res.keywords_result.keyword)
                         {
-                            Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
+                            // Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
                         }
                     }
 
@@ -230,9 +230,9 @@ namespace IBM.Watsson.Examples
                     {
                         foreach (var wordAlternative in res.word_alternatives)
                         {
-                            Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
-                            foreach (var alternative in wordAlternative.alternatives)
-                                Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
+                            // Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
+                            // foreach (var alternative in wordAlternative.alternatives)
+                            //     Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
                         }
                     }
                 }

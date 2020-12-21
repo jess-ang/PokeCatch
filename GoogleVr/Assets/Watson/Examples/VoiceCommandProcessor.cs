@@ -16,8 +16,7 @@ namespace IBM.Watsson.Examples {
         public List<string> specialActions;
 
         public List<GameObject> spawningPrefabs;
-        
-        public Animator anim;
+
 
         void Awake()
         {
@@ -31,11 +30,10 @@ namespace IBM.Watsson.Examples {
             {
                 if (actions.Contains(word.ToLower()))
                 {
-                    // if (onVoiceCommand != null)
-                    // {
-                    //     onVoiceCommand.Invoke(word.ToLower());
-                    // }
-                    anim.SetTrigger(word);
+                    if (onVoiceCommand != null)
+                    {
+                        onVoiceCommand.Invoke(word.ToLower());
+                    }
                     return;
                 }
             }
