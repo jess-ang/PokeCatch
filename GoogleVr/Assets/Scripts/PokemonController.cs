@@ -32,28 +32,29 @@ namespace GoogleVR.HelloVR
         private Inventory inventory;
         public Item item;
 
+        private Vector3 startingPosition;
+        private AskWord askWord;
+
         public float triggerInteractionTime = 0.1f;
         public float interactionTimer = 0f;
         private bool timerRunning = false;
-        private bool interact = true; // para que solo ocurra una vez
 
         // void Awake()
         // {
         //     rb = GetComponent<Rigidbody>();
         // }
 
-        void FixedUpdate ()
-        {
-            if(timerRunning)
-            {
-                interactionTimer += Time.deltaTime;
-                if (interactionTimer > triggerInteractionTime && interact)
-                {
-                    Interact();
-                    interact = false;
-                }
-            }
-        }
+        // void FixedUpdate ()
+        // {
+        //     if(timerRunning)
+        //     {
+        //         interactionTimer += Time.deltaTime;
+        //         if (interactionTimer > triggerInteractionTime)
+        //         {
+        //             Interact();
+        //         }
+        //     }
+        // }
         /// <summary>Sets this instance's GazedAt state.</summary>
         /// <param name="gazedAt">
         /// Value `true` if this object is being gazed at, `false` otherwise.
@@ -63,11 +64,13 @@ namespace GoogleVR.HelloVR
             if (gazedAt)
             {
                 timerRunning = true;
+                 Interact();
             }
             else
             {
                 timerRunning = false;
                 interactionTimer = 0f;
+                askWord.HideTextField();
             }
         }
 
@@ -75,6 +78,9 @@ namespace GoogleVR.HelloVR
         protected override void Start()
         {
             base.Start();
+            startingPosition = transform.localPosition;
+            askWord = FindObjectOfType<AskWord>();
+
             SetGazedAt(false);
         
             inventory = FindObjectOfType<Inventory>();
@@ -86,7 +92,12 @@ namespace GoogleVR.HelloVR
 
         public void Interact()
         {
-           Debug.Log("Mostrando pregunta");
+        //    Debug.Log("Mostrando pregunta");
+            if (askWord != null)
+            {
+                askWord.ShowTextField(transform.position);
+            }
+           
         }
 
         public override void VoiceInteract(string action)
