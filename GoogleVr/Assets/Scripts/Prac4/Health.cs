@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
         _minHealth = 0f;
         _maxHealth = 100f;
         InitializeHealth(_maxHealth);
-        SetHealth(health);
+        SetHealth(_maxHealth);
     }
 
     private void InitializeHealth(float maxHealth)
