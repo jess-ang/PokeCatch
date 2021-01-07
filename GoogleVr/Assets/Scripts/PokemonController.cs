@@ -26,8 +26,10 @@ namespace GoogleVR.HelloVR
     public class PokemonController : VoiceInteractable
     {
         public string wordToAsk = "pregunta";
+        public string japanese = "さかな";
         private Inventory inventory;
         public Item item;
+        private AudioSource source;
 
         private Vector3 startingPosition;
         private AskWord askWord;
@@ -58,7 +60,7 @@ namespace GoogleVR.HelloVR
             base.Start();
             startingPosition = transform.localPosition;
             askWord = FindObjectOfType<AskWord>();
-
+source = GetComponent<AudioSource>();
             SetGazedAt(false);
         
             inventory = FindObjectOfType<Inventory>();
@@ -74,7 +76,7 @@ namespace GoogleVR.HelloVR
             if (askWord != null)
             {
                 askWord.ShowTextField(transform.position);
-                askWord.SetTextField(wordToAsk);
+                askWord.SetTextField(japanese);
             }
            
         }
@@ -87,10 +89,14 @@ namespace GoogleVR.HelloVR
             Debug.Log("User says: "+action);
             if (action == wordToAsk && targetGazed)
             {
+                if (!source.isPlaying)
+            {
+                source.Play();
+            }
                 Debug.Log("Palabra "+action+" correcta, agregando a inventario");
                 askWord.HideTextField();
                 inventory.Add(item);
-                Destroy(gameObject,0.3f);
+                Destroy(gameObject,0.5f);
             }
             
         }
