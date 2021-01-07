@@ -4720,7 +4720,7 @@ MonoBehaviour:
   _serviceUrl: 
   ResultsField: {fileID: 1432080344}
   _iamApikey: oP8zbQyMxPlph0dI0QC395KWDgSpQ3Fp4BpCA8fQdHPZ
-  _recognizeModel: es-ES_BroadbandModel
+  _recognizeModel: ja-JP_BroadbandModel
 --- !u!4 &482585818
 Transform:
   m_ObjectHideFlags: 0
@@ -9887,7 +9887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5bf547f570c01498f052c66c11fe39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordToAsk: ataca
+  wordToAsk: "\u9B5A"
+  japanese: "\u3055\u304B\u306A"
   item: {fileID: 11400000, guid: 19f65baf43325a14aa5b75f38fe426a4, type: 2}
 --- !u!54 &972428877
 Rigidbody:
@@ -11929,6 +11930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordToAsk: azul
+  japanese: "\u3055\u304B\u306A"
   item: {fileID: 11400000, guid: 8af40cf4cf312c049b0806ff8b6ff374, type: 2}
 --- !u!135 &1215967675
 SphereCollider:
@@ -12331,7 +12333,7 @@ MonoBehaviour:
   wordsToAsk:
   - ataca
   - azul
-  - 
+  - "\u9B5A"
   - 
   - 
 --- !u!4 &1227133065
