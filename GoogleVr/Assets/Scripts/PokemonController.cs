@@ -25,36 +25,15 @@ namespace GoogleVR.HelloVR
     [RequireComponent(typeof(Collider))]
     public class PokemonController : VoiceInteractable
     {
-        // Rigidbody rb;
-        // public Vector3 kickDirection;
-        // public float kickForce = 30f;
-        
+        public string wordToAsk = "pregunta";
         private Inventory inventory;
         public Item item;
 
         private Vector3 startingPosition;
         private AskWord askWord;
 
-        public float triggerInteractionTime = 0.1f;
-        public float interactionTimer = 0f;
-        private bool timerRunning = false;
+        private bool targetGazed = false;
 
-        // void Awake()
-        // {
-        //     rb = GetComponent<Rigidbody>();
-        // }
-
-        // void FixedUpdate ()
-        // {
-        //     if(timerRunning)
-        //     {
-        //         interactionTimer += Time.deltaTime;
-        //         if (interactionTimer > triggerInteractionTime)
-        //         {
-        //             Interact();
-        //         }
-        //     }
-        // }
         /// <summary>Sets this instance's GazedAt state.</summary>
         /// <param name="gazedAt">
         /// Value `true` if this object is being gazed at, `false` otherwise.
@@ -63,13 +42,12 @@ namespace GoogleVR.HelloVR
         {
             if (gazedAt)
             {
-                timerRunning = true;
+                targetGazed = true;
                  Interact();
             }
             else
             {
-                timerRunning = false;
-                interactionTimer = 0f;
+                targetGazed = false;
                 askWord.HideTextField();
             }
         }
@@ -104,10 +82,13 @@ namespace GoogleVR.HelloVR
         {
             base.VoiceInteract(action);
             Debug.Log("Pateando pelota...");
-            if (action == "ataca" && timerRunning)
+            Debug.Log("Ask: "+wordToAsk);
+            Debug.Log("User says: "+action);
+            if (action == wordToAsk && targetGazed)
             {
                 Debug.Log("Palabra "+action+" correcta, agregando a inventario");
                 // rb.AddForce(kickDirection * kickForce, ForceMode.Force);
+                askWord.HideTextField();
                 inventory.Add(item);
                 Destroy(gameObject,0.7f);
             }

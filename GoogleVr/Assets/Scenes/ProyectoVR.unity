@@ -11749,9 +11749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5bf547f570c01498f052c66c11fe39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordToAsk: ataca
   item: {fileID: 11400000, guid: 19f65baf43325a14aa5b75f38fe426a4, type: 2}
-  triggerInteractionTime: 0.1
-  interactionTimer: 0
 --- !u!54 &972428877
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14243,9 +14242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5bf547f570c01498f052c66c11fe39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordToAsk: azul
   item: {fileID: 11400000, guid: 8af40cf4cf312c049b0806ff8b6ff374, type: 2}
-  triggerInteractionTime: 0.1
-  interactionTimer: 0
 --- !u!135 &1215967675
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14554,10 +14552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f85cfa24f4f5bc45b64c3ccf287b910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
+  wordsToAsk:
   - ataca
-  specialActions: []
-  spawningPrefabs: []
+  - azul
+  - 
+  - 
+  - 
 --- !u!4 &1227133065
 Transform:
   m_ObjectHideFlags: 0

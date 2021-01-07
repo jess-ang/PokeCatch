@@ -12,11 +12,7 @@ namespace IBM.Watsson.Examples {
         public delegate void OnVoiceCommand(string action);
         public OnVoiceCommand onVoiceCommand;
 
-        public List<string> actions;
-        public List<string> specialActions;
-
-        public List<GameObject> spawningPrefabs;
-
+        public List<string> wordsToAsk;
 
         void Awake()
         {
@@ -28,7 +24,7 @@ namespace IBM.Watsson.Examples {
             string[] words = transcript.Split(' ');
             foreach (var word in words)
             {
-                if (actions.Contains(word.ToLower()))
+                if (wordsToAsk.Contains(word.ToLower()))
                 {
                     if (onVoiceCommand != null)
                     {
@@ -37,37 +33,7 @@ namespace IBM.Watsson.Examples {
                     return;
                 }
             }
-
-            foreach (var word in words)
-            {
-                if (specialActions.Contains(word.ToLower()))
-                {
-                   if (word == "instantiate")
-                   {
-                       SpawnObject(words);
-                   }
-                   if (word == "music")
-                   {
-                       //
-                   }
-                }
-                break;
-            }
         }
 
-        void SpawnObject(string[] words)
-        {
-            foreach (var word in words)
-            {
-                foreach (var prefab in spawningPrefabs)
-                {
-                    if (prefab.name == word.ToLower())
-                    {
-                        Instantiate(prefab, new Vector3(0f,1f,0f), Quaternion.identity);
-                    }
-                    break;
-                }
-            }
-        }
     }
 }
