@@ -74,6 +74,7 @@ namespace GoogleVR.HelloVR
             if (askWord != null)
             {
                 askWord.ShowTextField(transform.position);
+                askWord.SetTextField(wordToAsk);
             }
            
         }
@@ -87,10 +88,9 @@ namespace GoogleVR.HelloVR
             if (action == wordToAsk && targetGazed)
             {
                 Debug.Log("Palabra "+action+" correcta, agregando a inventario");
-                // rb.AddForce(kickDirection * kickForce, ForceMode.Force);
                 askWord.HideTextField();
                 inventory.Add(item);
-                Destroy(gameObject,0.7f);
+                Destroy(gameObject,0.3f);
             }
             
         }
