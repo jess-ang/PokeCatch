@@ -96,7 +96,8 @@ source = GetComponent<AudioSource>();
                 Debug.Log("Palabra "+action+" correcta, agregando a inventario");
                 askWord.HideTextField();
                 inventory.Add(item);
-                Destroy(gameObject,0.5f);
+                targetGazed = false;
+                Destroy(gameObject,0.7f);
             }
             
         }

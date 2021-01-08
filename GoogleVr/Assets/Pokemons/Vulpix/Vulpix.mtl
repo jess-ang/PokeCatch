@@ -1,0 +1,35 @@
+# Blender MTL File: 'Vulpix.blend'
+# Material Count: 3
+newmtl RokonDh.png_RokonDh.png
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.487253 0.776206 0.577379
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd Vulpix.blend\RokonDh.png
+
+
+newmtl RokonEyeDh.png_RokonEyeDh.png
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.618606 0.569886 0.576160
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd Vulpix.blend\RokonEyeDh.png
+
+
+newmtl RokonMouthDh.png_RokonMouthDh.png
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.649193 0.759235 0.365969
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd Vulpix.blend\RokonMouthDh.png
+
+
