@@ -1,17 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Energy
-    - EnergyUI
+    - AskWord
     - GoogleVR.Demos.DemoInputManager
     - GoogleVR.Demos.DemoSceneManager
-    - GoogleVR.HelloVR.Food2
-    - GoogleVR.HelloVR.Gallinaa
-    - GoogleVR.HelloVR.GoldCoin
     - GoogleVR.HelloVR.HeadsetDemoManager
     - GoogleVR.HelloVR.HelloVRManager
     - GoogleVR.HelloVR.ObjectController
-    - GoogleVR.HelloVR.Potion2
+    - GoogleVR.HelloVR.PokemonController
     - Gvr.Internal.InstantPreview
     - GvrArmModel
     - GvrControllerInput
@@ -26,27 +22,30 @@ ScriptsOnlyBuild:
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - GvrTrackedController
-    - Health
-    - HealthUI
-    - HenScore
-    - HenScoreUI
     - InstantPreviewHelper
+    - Inventory
+    - InventoryUI
     - Locomotion
-    - Money
-    - MoneyUI
+    - Pokemon
+    - Slot
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Outline
     - UnityEngine.UI.Text
+    WatsonUnitySDK.dll:
+    - IBM.Watsson.Examples.ExampleStreaming
+    - IBM.Watsson.Examples.VoiceCommandProcessor
   sceneClasses:
-    Assets/Scenes/Practica6.unity:
+    Assets/Scenes/ProyectoVR.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -71,8 +70,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -81,8 +78,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
@@ -90,85 +85,91 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9758}
+      Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9796}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9952}
+      Script: {instanceID: 10106}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 10170}
     - Class: 114
-      Script: {instanceID: 10134}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 10286}
     - Class: 114
-      Script: {instanceID: 10192}
+      Script: {instanceID: 10380}
     - Class: 114
-      Script: {instanceID: 10200}
+      Script: {instanceID: 10392}
     - Class: 114
-      Script: {instanceID: 10210}
+      Script: {instanceID: 10468}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 10500}
     - Class: 114
-      Script: {instanceID: 10420}
+      Script: {instanceID: 10620}
     - Class: 114
-      Script: {instanceID: 10458}
+      Script: {instanceID: 10896}
     - Class: 114
-      Script: {instanceID: 10650}
+      Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 10672}
+      Script: {instanceID: 11400}
     - Class: 114
-      Script: {instanceID: 10730}
+      Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 10834}
+      Script: {instanceID: 11598}
     - Class: 114
-      Script: {instanceID: 10866}
+      Script: {instanceID: 11634}
     - Class: 114
-      Script: {instanceID: 10894}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 12330}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 12334}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 12448}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 12538}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 12600}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 12690}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 11858}
+      Script: {instanceID: 13176}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 11932}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 13280}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 17490}
+    - Class: 114
+      Script: {instanceID: 17492}
+    - Class: 114
+      Script: {instanceID: 17494}
+    - Class: 114
+      Script: {instanceID: 17496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -177,8 +178,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 134
-      Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
@@ -186,10 +185,6 @@ ScriptsOnlyBuild:
     - Class: 137
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -202,6 +197,18 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelReset
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotator
+  - hash:
+      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -212,6 +219,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneAndURLLoader
   - hash:
       serializedVersion: 2
       Hash: 2aeeec1b1a144c469cd2d37776bc2315
@@ -244,6 +257,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 61136915638918f2645ea8779369a3ae
+    assemblyName: IBM.Cloud.SDK.dll
+    namespaceName: IBM.Cloud.SDK.Utilities
+    className: NestedPrefabs
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Gvr.Internal
@@ -262,6 +281,12 @@ ScriptsOnlyBuild:
     className: AICharacterControl
   - hash:
       serializedVersion: 2
+      Hash: 2cb38bfac696193c1a7b6d10b5c88c38
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleNaturalLanguageClassifierV1
+  - hash:
+      serializedVersion: 2
       Hash: be8b29ecd05b56bbfb5cc0e39b16c11b
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
@@ -272,6 +297,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 17e54309cf4e59bdfdbbb8d16c59b752
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pickup
   - hash:
       serializedVersion: 2
       Hash: 0faadf7f444e033f28a19470d1ae257b
@@ -314,6 +345,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -376,6 +413,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 370a904e127b9ca5dfd19b4a821f9462
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryUI
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Ball
@@ -400,16 +443,16 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: ab6711bd6a48bae5c49ad4fd60c8ceef
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watsson.Examples
+    className: VoiceCommandProcessor
+  - hash:
+      serializedVersion: 2
       Hash: 5d46189bfca968b9b26fd60c37765c3f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrArmModel
-  - hash:
-      serializedVersion: 2
-      Hash: 79794e0eeec9ea293c65025ee1162f63
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleVR.HelloVR
-    className: Potion2
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -430,22 +473,10 @@ ScriptsOnlyBuild:
     className: TimedObjectActivator
   - hash:
       serializedVersion: 2
-      Hash: baebd904dbce94e31832f99540a57d1d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthModifier
-  - hash:
-      serializedVersion: 2
       Hash: ff7d3100dcac4699fa2b5abb996d38b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.Demos
     className: DemoInputManager
-  - hash:
-      serializedVersion: 2
-      Hash: 80b7854a767d61db6f4abca30b9970fc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleVR.HelloVR
-    className: Food2
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -532,16 +563,28 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 9669178b8ee47e79141ed8519e9595fb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MaterialMover
+  - hash:
+      serializedVersion: 2
+      Hash: 917876bca175a2cca95beb4c1fd72242
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Item
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: dc4852e0ba36196862404522df34c843
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Health
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: IBM.Cloud.SDK.dll
+    namespaceName: IBM.Cloud.SDK
+    className: KeyEventManager
   - hash:
       serializedVersion: 2
       Hash: db1f205a8c9dae1c39098cd23fc97f63
@@ -568,6 +611,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: b1be281fbd1ec93ca3a46cebbde8bd21
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleAssistantV2
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
@@ -578,12 +627,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
-  - hash:
-      serializedVersion: 2
-      Hash: baebd904dbce94e31832f99540a57d1d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnergyModifier
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -616,10 +659,22 @@ ScriptsOnlyBuild:
     className: ThirdPersonCharacter
   - hash:
       serializedVersion: 2
+      Hash: b54f8be68f6e3169d543383799d00e18
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraSwitch
+  - hash:
+      serializedVersion: 2
       Hash: 0574135745ea880aa1c1be2f2057ab89
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: ActivateTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExamplePersonalityInsightsV3
   - hash:
       serializedVersion: 2
       Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
@@ -658,12 +713,6 @@ ScriptsOnlyBuild:
     className: LookatTarget
   - hash:
       serializedVersion: 2
-      Hash: c27b5e31d4377480792608eece63a10b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleVR.HelloVR
-    className: Gallinaa
-  - hash:
-      serializedVersion: 2
       Hash: bf3913f0d6c694bf20e1d681c79a4993
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.Beta.Demos
@@ -680,6 +729,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrAllEventsTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleAssistantV1
   - hash:
       serializedVersion: 2
       Hash: c88c4199b288356ec3eb2f0d85abc619
@@ -712,16 +767,22 @@ ScriptsOnlyBuild:
     className: AutoMoveAndRotate
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoneyUI
+      Hash: 5f293d61fc9daf4e9fe3d99fa6b729b3
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watsson.Examples
+    className: ExampleStreaming
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
     className: ForcedReset
+  - hash:
+      serializedVersion: 2
+      Hash: 0be6af884451d9f9c56374b1ffe107fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GoogleVR.HelloVR
+    className: PokemonController
   - hash:
       serializedVersion: 2
       Hash: f8bd7a92bf9f22d289759689ae7b1fd4
@@ -742,6 +803,12 @@ ScriptsOnlyBuild:
     className: PlanarReflection
   - hash:
       serializedVersion: 2
+      Hash: 3d1826f2eb9e2cff190974e005e34a36
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleToneAnalyzerV3
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
@@ -754,16 +821,28 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 296fe27bf6a67ad114f808be4eaa08cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityStandardAssets.SceneUtils
+    className: ParticleSceneControls
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: 
+    className: VoiceInteractable
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: MobileControlRig
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthUI
+      Hash: af0537dabf7072720b1497b88b975216
+    assemblyName: IBM.Cloud.SDK.dll
+    namespaceName: IBM.Cloud.SDK
+    className: FrameRateCounter
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -796,6 +875,12 @@ ScriptsOnlyBuild:
     className: SampleClass
   - hash:
       serializedVersion: 2
+      Hash: b04d548399136052f80f7efa8a039d23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Inventory
+  - hash:
+      serializedVersion: 2
       Hash: 1f8286dbbba9b39b9120dec32b8944e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -806,6 +891,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 55025f700813ed151426e94c7d0e7dbb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Coin
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -838,16 +929,52 @@ ScriptsOnlyBuild:
     className: FreeLookCam
   - hash:
       serializedVersion: 2
+      Hash: 82426ad36edcf648ca394c12876546b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gallina
+  - hash:
+      serializedVersion: 2
+      Hash: 5fd8258586b12b9c7e6ed50469780e09
+    assemblyName: IBM.Cloud.SDK.dll
+    namespaceName: IBM.Cloud.SDK.Utilities
+    className: TimedDestroy
+  - hash:
+      serializedVersion: 2
       Hash: 2294ba4929e515b4b46046eff1f6b057
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Effects
     className: ExplosionFireAndDebris
   - hash:
       serializedVersion: 2
+      Hash: 5a17c5a5248417f4dee1707e19a475e2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AskWord
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: b25c4540fffe1829be41bbacabdf2097
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: 
+    className: ExampleDiscoveryV2
+  - hash:
+      serializedVersion: 2
+      Hash: 3d1826f2eb9e2cff190974e005e34a36
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: 
+    className: ExampleDiscoveryV1
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Interactable
   - hash:
       serializedVersion: 2
       Hash: 53ce9a4d3b026469b394261470c07be7
@@ -868,6 +995,12 @@ ScriptsOnlyBuild:
     className: Restarter
   - hash:
       serializedVersion: 2
+      Hash: 6044529815c0850359298e2f87d67d0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityStandardAssets.SceneUtils
+    className: SlowMoButton
+  - hash:
+      serializedVersion: 2
       Hash: 97a580c59cad3623a01bbf5fb2d7fa93
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
@@ -875,9 +1008,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HenScoreUI
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson
+    className: Common
   - hash:
       serializedVersion: 2
       Hash: 9a40de0f5a84ec02044ccfb05875df71
@@ -890,6 +1023,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Cameras
     className: TargetFieldOfView
+  - hash:
+      serializedVersion: 2
+      Hash: 3d1826f2eb9e2cff190974e005e34a36
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleNaturalLanguageUnderstandingV1
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -916,6 +1055,12 @@ ScriptsOnlyBuild:
     className: ObjectController
   - hash:
       serializedVersion: 2
+      Hash: 3d1826f2eb9e2cff190974e005e34a36
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: 
+    className: ExampleLanguageTranslatorV3
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -932,12 +1077,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets._2D
     className: Platformer2DUserControl
-  - hash:
-      serializedVersion: 2
-      Hash: 649cc2de5dec85df89ddb9dec41c20ce
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HenScore
   - hash:
       serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
@@ -970,10 +1109,22 @@ ScriptsOnlyBuild:
     className: HandHeldCam
   - hash:
       serializedVersion: 2
+      Hash: 413cc320dada33270eae6493383b63f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GoogleVR.HelloVR
+    className: GazeController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrControllerTooltipsSimple
+  - hash:
+      serializedVersion: 2
+      Hash: 94fa5bce38046c5b3006682c0d8d0ef7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slot
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -982,22 +1133,28 @@ ScriptsOnlyBuild:
     className: AlphaButtonClickMask
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: GenericSerialization
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Editor
+    className: WatsonMenu
+  - hash:
+      serializedVersion: 2
       Hash: c933b2cffdb9d1429a103e9d63c523ef
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: DynamicShadowSettings
-  - hash:
-      serializedVersion: 2
-      Hash: a2d0503a3411fff26b38f5cf77869845
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Energy
   - hash:
       serializedVersion: 2
       Hash: 1cbb684877139a8fcd5903f27462e898
@@ -1012,10 +1169,22 @@ ScriptsOnlyBuild:
     className: GvrHeadset
   - hash:
       serializedVersion: 2
+      Hash: 02e6483ba585336f78a48b8cf2289aa0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuSceneLoader
+  - hash:
+      serializedVersion: 2
       Hash: 93376649573e562d06247140da7ea9a8
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: SimpleActivatorMenu
+  - hash:
+      serializedVersion: 2
+      Hash: c0f472e6eb495e2bb58407c57197f75e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WheelController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1042,10 +1211,22 @@ ScriptsOnlyBuild:
     className: EmulatorManager
   - hash:
       serializedVersion: 2
-      Hash: bcdb20ffe9b8d0516e6072e1cebf400a
+      Hash: 7e6b022cd7f1c29976ca8b1a21d06265
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityStandardAssets.SceneUtils
+    className: PlaceTargetWithMouse
+  - hash:
+      serializedVersion: 2
+      Hash: 917876bca175a2cca95beb4c1fd72242
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Money
+    className: Pokemon
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Editor
+    className: IBMCloudSignup
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -1072,6 +1253,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: eeb36c005b6f47fc674ed3f1fe791174
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChestDemo
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1088,12 +1275,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Effects
     className: SmokeParticles
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnergyUI
   - hash:
       serializedVersion: 2
       Hash: 49dcb3939f87870ac10cf1f8fcdfb35e
@@ -1118,6 +1299,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets._2D
     className: Camera2DFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: IBM.Cloud.SDK.dll
+    namespaceName: IBM.Cloud.SDK.Utilities
+    className: Runnable
   - hash:
       serializedVersion: 2
       Hash: 219ec6059796d8951d2adcd8505d0dc2
@@ -1196,6 +1383,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GvrTooltip
+  - hash:
+      serializedVersion: 2
+      Hash: f8b8fd6d9ec9ae28a5e3fc819425fa72
+    assemblyName: WatsonUnitySDK.dll
+    namespaceName: IBM.Watson.Examples
+    className: ExampleTextToSpeechV1
   - hash:
       serializedVersion: 2
       Hash: 12d597f55904a0e1480e1e25a07f583c
@@ -1312,12 +1505,6 @@ ScriptsOnlyBuild:
     className: GvrControllerReticleVisual
   - hash:
       serializedVersion: 2
-      Hash: 089360374e95640cddbca397f6aef826
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleVR.HelloVR
-    className: GoldCoin
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1366,5 +1553,5 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Practica6.unity
-  playerPath: C:/Users/Jessica/Documents/prac6.apk
+  - Assets/Scenes/ProyectoVR.unity
+  playerPath: C:/Users/Jessica/Documents/proyecto.apk

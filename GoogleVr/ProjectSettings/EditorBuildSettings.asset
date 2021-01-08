@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Practica6.unity
-    guid: 5dccbf5c363999c43bb96fa3fbb86935
+    path: Assets/Scenes/ProyectoVR.unity
+    guid: 127e2ed86e9123a459aa132bc05269f3
   m_configObjects: {}
